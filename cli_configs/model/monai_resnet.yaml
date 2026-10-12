@@ -1,0 +1,8 @@
+# MONAI 3D ResNet-18, trained from scratch for the published results (pretrained: False).
+# To reproduce the (unpublished) transfer-learning ablation with MedicalNet weights instead,
+# override on the command line: model.pretrained=True model.chpt_path=/path/to/medicalnet_resnet_18_23dataset.pth
+# MedicalNet weights are third-party and must be obtained separately (see THIRD_PARTY_NOTICES.md).
+_target_: models.monai_resnet.MonaiResNet18
+pretrained: False
+chpt_path: null
+spatial_dims: 3

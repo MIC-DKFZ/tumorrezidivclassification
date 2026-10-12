@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite the manuscript below (update this
+  file with the final journal/volume/DOI once published).
+type: software
+title: >-
+  Code for: Dose-Informed Deep Learning for Differentiating In-Field
+  Glioblastoma Recurrence From Radiation-Induced Contrast Enhancement
+authors:
+  - family-names: Wessel
+    given-names: Lars B.
+    email: lars.wessel@med.uni-heidelberg.de
+    affiliation: >-
+      Department of Radiation Oncology, Heidelberg University Hospital,
+      Heidelberg University, Heidelberg, Germany
+  # TODO: add the remaining co-authors (15 authors total on the manuscript)
+license: CC-BY-NC-4.0
+repository-code: "https://github.com/TODO/TODO"
+preferred-citation:
+  type: article
+  title: >-
+    Dose-Informed Deep Learning for Differentiating In-Field Glioblastoma
+    Recurrence From Radiation-Induced Contrast Enhancement
+  authors:
+    - family-names: Wessel
+      given-names: Lars B.
+    # TODO: add the remaining co-authors in manuscript order
+  journal: International Journal of Radiation Oncology, Biology, Physics
+  year: 2026
+  status: submitted # TODO: update to "published" with volume/issue/DOI once accepted

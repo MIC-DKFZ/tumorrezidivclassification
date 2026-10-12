@@ -1,0 +1,8 @@
+# @package _global_
+exp_dir: ${oc.env:EXPERIMENT_LOCATION}
+data_dir: ${oc.env:DATASET_LOCATION}
+
+trainer:
+  enable_progress_bar: False
+  callbacks:
+    progressbar: ~

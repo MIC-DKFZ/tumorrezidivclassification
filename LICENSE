@@ -1,0 +1,46 @@
+Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+============================================================================
+
+Copyright (c) German Cancer Research Center (DKFZ), Heidelberg, and the authors.
+
+This license applies to the original code authored for this project (the
+"Software"), as listed in THIRD_PARTY_NOTICES.md under "Original work". Some
+files in this repository were adapted or vendored from other open-source
+projects and remain under those projects' own licenses — see
+THIRD_PARTY_NOTICES.md for the full breakdown before reusing or
+redistributing any part of this repository.
+
+Human-readable summary (this is not a substitute for the license itself):
+
+You are free to:
+  * Share   — copy and redistribute the Software in any medium or format.
+  * Adapt   — remix, transform, and build upon the Software.
+
+Under the following terms:
+  * Attribution     — You must give appropriate credit, provide a link to
+    this license, and indicate if changes were made.
+  * NonCommercial    — You may NOT use the Software, in whole or in part,
+    for commercial or industrial purposes. This explicitly includes, without
+    limitation: use by or for a for-profit, industrial, or commercial entity
+    (including internal R&D use by such an entity); incorporation into a
+    commercial or industrial product, platform, or service; and any use
+    intended for, or directed toward, commercial advantage or monetary
+    compensation. Use for academic research, teaching, and non-commercial
+    scientific evaluation is permitted.
+  * No additional restrictions — You may not apply legal terms or
+    technological measures that legally restrict others from doing anything
+    the license permits.
+
+No warranties are given. The Software is provided "AS IS", without warranty
+of any kind, and the authors and DKFZ disclaim all liability for its use,
+to the extent permitted by applicable law. This code accompanies a research
+publication and has not been validated or certified for clinical use; it
+must not be used to inform real patient care or diagnosis.
+
+The full, legally binding license text is the CC BY-NC 4.0 Legal Code,
+available at:
+
+    https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+In the event of any conflict between this summary and the Legal Code linked
+above, the Legal Code governs.

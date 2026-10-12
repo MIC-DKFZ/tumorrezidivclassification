@@ -1,0 +1,67 @@
+# @package _global_
+#
+# Configuration for the REZ-vs-RICE MONAI ResNet-18 model (see paper Methods /
+# Supplementary Table S3). binary_task below selects one of the three pairwise
+# comparisons; selected_modalities on the datamodule controls which of the
+# three input channels (pMRI=0, eMRI=1, RD=2) are fed to the model, to
+# reproduce the seven input-channel ablations reported in the paper.
+
+seed: 317852
+
+data:
+  module:
+    _target_: datasets.tumorrez.GlioblastomaDataModule
+    name: Dataset001_GlioblastomaTimeSeries
+    data_root_dir: ${data_dir}
+    batch_size: 4
+
+    weighted_sampling: true
+
+    # Set to "0_vs_1", "0_vs_2", or "1_vs_2" to run one of the three binary
+    # classification tasks reported in the paper (set to null for the
+    # unused 3-class setting). NOTE: setting this disables weighted_sampling,
+    # since the binary sub-dataset is already class-balanced by subsampling.
+    binary_task: "1_vs_2"
+
+    # Select which of the 3 channels (0=pMRI, 1=eMRI, 2=RD) are loaded, to
+    # reproduce the single-modality / dual-modality / tri-modality ablations.
+    # null loads all channels present on disk.
+    selected_modalities: null
+
+    train_transforms:
+      _target_: augmentation.policies.batchgenerators.get_training_transforms
+      patch_size: [224, 224, 224]
+      rotation_for_DA: 0.523599
+      mirror_axes: [0, 1, 2]
+      do_dummy_2d_data_aug: False
+    test_transforms: null
+
+  cv:
+    k: 5
+
+  num_classes: 2
+  patch_size: [224, 224, 224]
+
+model:
+  task: 'Classification'
+  input_channels: 3 # pMRI, eMRI, RD (overridden per-ablation via data.module.selected_modalities)
+  input_dim: 3
+  optimizer: Adam
+  lr: 0.00005
+  scheduler: ReduceLROnPlateau
+  resnet_dropout: 0.35
+
+trainer:
+  logger:
+    project: TumorrezTimeSeries
+    name: namedesruns
+  accumulate_grad_batches: 1
+  max_epochs: 800
+  precision: '16-mixed'
+  sync_batchnorm: True
+
+metrics:
+  - 'f1'
+  - 'balanced_acc'
+  - 'ap'
+  - 'auroc'

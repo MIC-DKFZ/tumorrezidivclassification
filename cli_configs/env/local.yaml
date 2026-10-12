@@ -1,0 +1,5 @@
+# @package _global_
+# Set these to local directories, or use `env=cluster` to read them from
+# the EXPERIMENT_LOCATION / DATASET_LOCATION environment variables instead.
+exp_dir: '/path/to/experiments'
+data_dir: '/path/to/nnunet_preprocessed'
